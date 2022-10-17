@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs');
 const validator = require('validator');
 const User = require('../models/User');
 const Session = require('../models/Session');
+const Post = require('../models/Post');
 
 const message = (req) => {
 	let message = req.flash('error');
@@ -14,7 +15,7 @@ const message = (req) => {
 
 	return message;
 }
-
+ 
 const oldInput = (req) => {
 	let oldInput = req.flash('oldInput');
 	if (oldInput.length > 0) {
